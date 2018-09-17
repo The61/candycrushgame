@@ -1,0 +1,303 @@
+<!doctype html>
+	<html lang ="tr">
+		<html>
+			<head>
+				<title>Candy Game</title>
+				<meta charset ="utf-8">
+					<meta name ="viewport" content="width=device-width,initial-scale=1">
+						<meta name ="description" content ="Türk Yapımı Şeker Kırma Oyunu :D">
+							<meta name ="keywords" content="seker kir,seker kirma oyunu,candy crush">
+								<meta name ="owner" content ="The61">
+						<script type ="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+						<script>
+						var app=angular.module("myapp",[ ]);
+						app.controller("mycontrol",function($scope){
+							$scope.deger = 0;
+							$scope.hamle = 40;
+							$scope.skor = 10;
+							$scope.say = function(){
+								$scope.deger = $scope.deger + 1;
+								$scope.hamle = $scope.hamle - 1;
+								$scope.skor = $scope.skor + 10;
+								if($scope.hamle == 0){
+									$scope.deger = "Oyun bitti";
+									$scope.hamle = str("Yok");
+									}
+								}
+							});
+						</script>
+						<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+						<script type ="text/javascript" src ="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+					 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+						<script>
+							$(document).ready(function(){
+								var obj = document.createElement("audio");
+									obj.src = "ses.mp3";
+									obj.volume = 1.0;
+									obj.autoPlay = false;
+									obj.preLoad = true;
+									obj.controls = true;
+								$("#start"). click(function(){
+									$("#rw").fadeToggle(1500);
+									});
+								$("#hata").click(function(){
+									$("#contact").fadeToggle(1500);
+									});
+								$("#item:nth-child(1n+0)").click(function(){
+									obj.play();
+									$(this).css("background","none");
+									$(this).hide(500);
+									$("p").css("display","block");
+									});
+								});
+							</script>
+							<style type ="text/css">
+							body{
+	margin:0;
+	padding:0;
+	background:#FF5C49;
+	background-size:cover;
+	background-position:center;
+	}
+	#rw{
+		width:100%;
+		height:%100;
+		margin-top:50px;
+		border-radius:10px;
+		display:none;
+		box-sizing:border-box;
+		overflow:scroll;
+		}
+	#item{
+		text-align:center;
+		box-sizing:border-box;
+		background:rgba(255,255,255,0.3);
+		border-radius:300px;
+		}
+		
+	p{
+		color:white;
+		font-size:20px;
+		font-weight:500;
+		display:none;
+		}
+		
+		p span{
+			color:rgba(0,0,0,0.6);
+			}
+			
+			h1{
+				color:white;
+				font-weight:bold;
+				text-align:center;
+				text-shadow:5px 3px #FF9489;
+				padding-top:10px;
+				transition:all 350ms;
+				}
+				
+				h1:hover{
+					text-shadow:30px 30px #FF9489;
+					transition:all 350ms;
+					}
+				
+			#contact{
+				display:none;
+				}
+				
+				textarea{
+					background:none;
+					border:none;
+					outline:0;
+					padding-top:15px;
+					border-bottom:1px solid #A9A9A9;
+					transition:all 350ms;
+					}
+					
+					textarea:focus{
+						border-bottom:2px solid rgba(0,128,128,0.6);
+						transition:all 350ms;
+						}
+						
+						#gndr{
+							margin-top:20px;
+							}
+							
+							#grs{
+								display:inline-block;
+								padding-top:15px;
+								color:rgb(0,0,0,0.5);
+								transition:all 350ms;
+								}
+								
+								#grs:hover{
+									color:rgba(0,128,128);
+									transition:all 350ms;
+									}
+									
+									ul li:nth-child(1){
+										color:rgb(0,128,128);
+										font-weight:bold;
+										}
+		
+							</style>
+				</head>
+				<body ng-app ="myapp" ng-controller ="mycontrol">
+					<!--container start-->
+					<div class ="container">
+						<!--top text-->
+						<h1>Şeker Kır</h1>
+						<!--#-->
+					
+					<!--row start-->
+					<div id ="rw" class ="row">
+						<!--GAME ?TEMS HERE (OYUN E?YALARI)-->
+						<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div><div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<div id ="item" ng-click = "say();" class ="col m2">
+							<img src ="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/64/32426-candy-icon.png">
+							</div>
+							<!--GAME ITEMS END-->
+						</div>
+						<!--row end-->
+						<p>
+Skorun <span>{{skor}}</span><br>
+<span>{{deger}}</span> tane şeker kırdın<br>
+						
+<span>{{hamle}}</span> hamle hakkın kaldı
+</p>
+<button id ="start" class ="btn waves-effect">Oyunu Başlat / Oyunu Durdur</button>
+<button id ="hata" class ="btn waves-effect">Hata Bildir</button>
+                    <div id ="contact"  class ="card-panel col m12">
+                    <!--Contact form start-->
+                    <form action ="" method ="post">
+                    <h6>Epostanız :</h6>
+                    <input type ="email" name ="email" required>
+                    	<h6>Mesajınız :</h6>
+                    <textarea name ="mesaj" required></textarea>
+                    <button id ="gndr" type ="submit" class ="btn waves-effect">Gönder</button><br>
+                    <span id ="grs">Oyun hakkında
+görüşlerinizi ve önerilerinizi yazabilirsiniz.
+(Sadece tasarımdır. Şu anlık çalışmıyor)
+</span>
+<h6>Sıkça Sorulan Sorular</h6>
+<div class ="card-panel col s1" >
+	Hamle sayisi " - " lere iniyor <span class ="badge">- _ -</span>
+	</div>
+	<div class ="card-panel col m3" >
+     K?r?lan ?eker say?s? " 11111 " oluyor <span class ="badge">- _ -</span>
+	</div>
+</form>
+<!--Contact form end#-->
+					</div>
+					<div class ="card-panel col m12 s12 l12 hoverable">
+						<a href ="#">Kaynak kodlarından kendi şeker kırma sesinizi ekleyebilirsiniz</a>
+						<ul>
+							<li>Kullanılanlar</li>
+							<li>Angular Javascript</li>
+							<li>Jquery</li>
+							<li>Materialize Css</li>
+							</ul>
+						</div>
+					</div>
+					<!--container end-->
+				</body>
+				</html>
