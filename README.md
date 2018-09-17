@@ -1,4 +1,3 @@
 # Candy Crush Game
- Angular Js
- Jquery
-Materialize Css
+ This is a basic candy crush game.
+ Made with Angular Js & Jquery & Materialize Css
